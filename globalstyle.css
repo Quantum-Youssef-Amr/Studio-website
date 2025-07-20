@@ -1,0 +1,255 @@
+:root{
+    --main-color: #fff;
+    --sec-color: #000;
+
+    --corners-r: 25px;
+    --border-width: 1px;
+    
+    --font-smallest:11px;
+    --font-small:14px;
+    --font-med:18px;
+    --font-big:22px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--main-color);
+    background-image: url("./src/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: var(--main-color);
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace;
+
+    margin: 0px;
+    height: inherit;
+    animation: op 2s forwards;
+}
+
+@keyframes op {
+    from{ backdrop-filter: blur(0px);}
+    to{backdrop-filter: blur(5px);}
+}
+
+
+main{
+    height: inherit;
+}
+
+
+/* header style */
+header{
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 50px;
+
+    background-color: #00000053;
+    overflow: hidden;
+}
+
+.logo{
+    border-radius: 25%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+}
+
+.navbar * {
+    display: flex;
+    flex-grow: 1;
+    width: 30px;
+}
+
+.navbar > * > *{
+    font-size: var(--font-small);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    
+    border-width: 0px var(--border-width);
+}
+
+.navbar > * {
+    color: transparent;
+}
+
+.navbar > * :hover{
+    background-color: var(--main-color);
+    color: var(--sec-color);
+}
+
+.navbar > * :visited{
+    color: var(--main-color);
+    font-style: normal;
+}
+
+@media (max-width:400px) {
+    .navbar > * > *{
+        font-size: var(--font-smallest);
+    }
+    .navbar{
+        width: 100%;
+        min-width: auto;
+    }
+    
+}
+
+/* end */
+/* footer style */
+footer{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px;
+}
+/* end */
+
+/* contact us */
+.mainContactus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stImage{
+    border-radius: 25px;
+}
+
+.cotactuslabel{
+    font-weight: bolder; 
+    font-size: large; 
+    padding: 10px;
+}
+
+.btnsCont{
+    display: flex; 
+    justify-content: center;
+    align-content: center; 
+    flex-direction: row;
+    width: 50%; 
+}
+
+.btnsCont > * > *{
+    border-radius: 50%;
+    padding: 0px 0px;
+    margin: 0px 10px;
+    overflow: visible;
+    background-color: var(--main-color);
+
+}
+/* end */
+/* landing */
+
+.mainImgCont{
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid var(--main-color);
+    border-width: 0px 0px 1px 0px;
+
+    background-color: #ffffff1f;
+}
+
+.mainImgCont > img{
+    min-width: 423px;
+    max-width: 100%;
+    min-height: 216px;
+    max-height: 400px;
+}
+
+.Games{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: start;
+
+    overflow: auto hidden;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.card{
+    padding: 0xp;
+    margin: 0px;
+}
+
+.card > a{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+
+    background-color: #000;
+    color: transparent;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid var(--main-color);
+
+    min-width: 300px;
+    height: 200px;
+}
+.card img{
+    flex-grow: 1;
+    min-width: 100%;
+    height: 80%;
+    
+    align-self: center;
+    border-radius: 15px;
+}
+
+.cardTitle{
+    color: var(--main-color);
+    font-size: var(--font-big);
+    padding: 0px ;
+}
+
+.price{
+    color: #36dc5f;
+    font-size: var(--font-med);
+    padding: 0px ;
+}
+
+.gamesTitle{
+    color: var(--main-color);
+    font-size: var(--font-med);
+    font-weight: bold;
+    padding: 0xp;
+    margin: 0px 10px 0px 0px;
+}
+
+.gamesTitle a {
+    color: var(--main-color);
+}
+
+.gamesTitle a :visited{
+    color: var(--main-color);
+}
+
+.gamesSection{
+    border: 1px solid var(--main-color);
+    border-width: 0px 0px 1px 0px;
+}
